@@ -1,0 +1,2272 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://abhimhamane.github.io/pyshbundle/convert_data_formats/">
+      
+      
+        <link rel="prev" href="../load_data/">
+      
+      
+        <link rel="next" href="../core_functionality/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
+    
+    
+      
+        <title>Convert Data Formats - pyshbundle</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#convert-data-formats" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="pyshbundle" class="md-header__button md-logo" aria-label="pyshbundle" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            pyshbundle
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Convert Data Formats
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/abhimhamane/pyshbundle" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="pyshbundle" class="md-nav__button md-logo" aria-label="pyshbundle" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    pyshbundle
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/abhimhamane/pyshbundle" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/mn5hk/pyshbundle/issues" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Report Issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reference Manual
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Reference Manual
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pyshbundle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pyshbundle Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../load_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Load Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Convert Data Formats
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Convert Data Formats
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#spherical-harmonics-data-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spherical Harmonics Data Formats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spherical Harmonics Data Formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clm-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      clm-format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#klm-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      klm-format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left-c-backslash-s-right-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      \(\left | C \backslash S \right |\)-format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left-s-c-right-backslash-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      \(\left / S | C \right \backslash\)-format
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.cs2sc" class="md-nav__link">
+    <span class="md-ellipsis">
+      cs2sc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.cs2sc.cs2sc" class="md-nav__link">
+    <span class="md-ellipsis">
+      cs2sc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.sc2cs" class="md-nav__link">
+    <span class="md-ellipsis">
+      sc2cs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.sc2cs.sc2cs" class="md-nav__link">
+    <span class="md-ellipsis">
+      sc2cs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.clm2cs" class="md-nav__link">
+    <span class="md-ellipsis">
+      clm2cs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.clm2cs.clm2cs" class="md-nav__link">
+    <span class="md-ellipsis">
+      clm2cs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.clm2sc" class="md-nav__link">
+    <span class="md-ellipsis">
+      clm2sc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.clm2sc.clm2sc" class="md-nav__link">
+    <span class="md-ellipsis">
+      clm2sc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.klm2sc" class="md-nav__link">
+    <span class="md-ellipsis">
+      klm2sc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.klm2sc.klm2sc" class="md-nav__link">
+    <span class="md-ellipsis">
+      klm2sc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.klm2sc.klm2sc_new" class="md-nav__link">
+    <span class="md-ellipsis">
+      klm2sc_new
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core_functionality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Core Functionality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auxillary_codes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auxillary Codes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acknowledgement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledgement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#spherical-harmonics-data-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spherical Harmonics Data Formats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spherical Harmonics Data Formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clm-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      clm-format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#klm-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      klm-format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left-c-backslash-s-right-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      \(\left | C \backslash S \right |\)-format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left-s-c-right-backslash-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      \(\left / S | C \right \backslash\)-format
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.cs2sc" class="md-nav__link">
+    <span class="md-ellipsis">
+      cs2sc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.cs2sc.cs2sc" class="md-nav__link">
+    <span class="md-ellipsis">
+      cs2sc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.sc2cs" class="md-nav__link">
+    <span class="md-ellipsis">
+      sc2cs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.sc2cs.sc2cs" class="md-nav__link">
+    <span class="md-ellipsis">
+      sc2cs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.clm2cs" class="md-nav__link">
+    <span class="md-ellipsis">
+      clm2cs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.clm2cs.clm2cs" class="md-nav__link">
+    <span class="md-ellipsis">
+      clm2cs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.clm2sc" class="md-nav__link">
+    <span class="md-ellipsis">
+      clm2sc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.clm2sc.clm2sc" class="md-nav__link">
+    <span class="md-ellipsis">
+      clm2sc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.klm2sc" class="md-nav__link">
+    <span class="md-ellipsis">
+      klm2sc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.klm2sc.klm2sc" class="md-nav__link">
+    <span class="md-ellipsis">
+      klm2sc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyshbundle.klm2sc.klm2sc_new" class="md-nav__link">
+    <span class="md-ellipsis">
+      klm2sc_new
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="convert-data-formats">Convert Data Formats<a class="headerlink" href="#convert-data-formats" title="Permanent link">&para;</a></h1>
+<p>Spherical harmonic functions or coefficients, Legendre functions and their derivatives can be arranged in different ways. There are multiple functions in SHBundle for reordering from one format to another. Some of them have been translated to Python in PySHBundle. Couple of new ones have also been added.</p>
+<h2 id="spherical-harmonics-data-formats">Spherical Harmonics Data Formats<a class="headerlink" href="#spherical-harmonics-data-formats" title="Permanent link">&para;</a></h2>
+<h3 id="clm-format">clm-format<a class="headerlink" href="#clm-format" title="Permanent link">&para;</a></h3>
+<p>This is a standard format to store spherical harmonic coefficients in the indexed column-vector-format (abbreviatedL clm-format)</p>
+<div class="arithmatex">\[\begin{equation}
+  \left( n, m, \overline{C}_{n, m}, \overline{S}_{n, m}, \left[ \sigma_{\overline{C}_{n, m}}, \sigma_{\overline{S}_{n, m}} \right] \right)
+\end{equation}\]</div>
+<p>The first column represents the degree <span class="arithmatex">\(n\)</span>, the second column represents the order <span class="arithmatex">\(m\)</span> (both n,m are integers), followed by the coefficients <span class="arithmatex">\(\overline{C}_{n, m}, \overline{S}_{n, m}\)</span> and the last two columns contain their respective standard deviations <span class="arithmatex">\(\sigma_{\overline{C}_{n, m}}, \sigma_{\overline{S}_{n, m}}\)</span></p>
+<h3 id="klm-format">klm-format<a class="headerlink" href="#klm-format" title="Permanent link">&para;</a></h3>
+<p>This is a variation of the clm-format for compact notation with just 3 or 4 columns. The coefficients are sorted first w.r.t. degree and then the order, particularly the sine-coefficients are arranged starting first with negative orders. The following matrix represents the klm-format:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>\begin{bmatrix}
+  0 &amp; 0 &amp; \overline{C}_{0, 0} &amp; \sigma_{\overline{C}_{0, 0}} \\
+  0 &amp; 0 &amp; \overline{C}_{0, 0} &amp; \sigma_{\overline{C}_{0, 0}} \\
+  0 &amp; 0 &amp; \overline{C}_{0, 0} &amp; \sigma_{\overline{C}_{0, 0}} \\
+  0 &amp; 0 &amp; \overline{C}_{0, 0} &amp; \sigma_{\overline{C}_{0, 0}} \\
+  0 &amp; 0 &amp; \overline{C}_{0, 0} &amp; \sigma_{\overline{C}_{0, 0}} \\
+  0 &amp; 0 &amp; \overline{C}_{0, 0} &amp; \sigma_{\overline{C}_{0, 0}} \\
+  0 &amp; 0 &amp; \overline{C}_{0, 0} &amp; \sigma_{\overline{C}_{0, 0}} \\
+  0 &amp; 0 &amp; \overline{C}_{0, 0} &amp; \sigma_{\overline{C}_{0, 0}} \\
+  0 &amp; 0 &amp; \overline{C}_{0, 0} &amp; \sigma_{\overline{C}_{0, 0}} \\
+  \vdots &amp; &amp; &amp; \vdots \\
+  N_{max} &amp; N_{max} &amp; \overline{C}_{N_{max}, N_{max}} &amp; \sigma_{\overline{C}_{N_{max}, N_{max}}} \\
+\begin{bmatrix}
+</code></pre></div></td></tr></table></div>
+<h3 id="left-c-backslash-s-right-format"><span class="arithmatex">\(\left | C \backslash S \right |\)</span>-format<a class="headerlink" href="#left-c-backslash-s-right-format" title="Permanent link">&para;</a></h3>
+<p>This is another well known arrangement of Spherical Harmonic coefficients. This is a square matrix of size <span class="arithmatex">\(n_{max}, n_{max}\)</span>.</p>
+<p>The lower traingular terms are made of the cosine terms</p>
+<h3 id="left-s-c-right-backslash-format"><span class="arithmatex">\(\left / S | C \right \backslash\)</span>-format<a class="headerlink" href="#left-s-c-right-backslash-format" title="Permanent link">&para;</a></h3>
+<p>This is yet another popular format where the sine-coefficients are flipped from left to right, to obtain a triangular arrangement which is completed by zeros.</p>
+<p>The following figure illustrates the  <span class="arithmatex">\(\left | C \backslash S \right |\)</span> and  <span class="arithmatex">\(\left / S | C \right \backslash\)</span> format respectively.</p>
+<p><img alt="Spherical Harmonic Formats" src="../img/sh_formats.png" /></p>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="pyshbundle.cs2sc"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="pyshbundle.cs2sc.cs2sc" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">cs2sc</span><span class="p">(</span><span class="n">field</span><span class="p">)</span></code>
+
+<a href="#pyshbundle.cs2sc.cs2sc" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>converts the square (L+1)x(L+1) matrix 'field', containing
+spherical harmonics coefficients in |C\S| storage format into a 
+rectangular (L+1)x(2L+1) matrix in  /S|C\ format.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>field</code></td>
+          <td>
+                <code><span title="np.ndarray">ndarray</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>the square (L+1)x(L+1) numpy matrix field , containing
+       spherical harmonics coefficients in |C\S| storage format</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>numpy.ndarray: Rectangular (L+1)x(2L+1) numpy matrix in  /S|C\ format</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>TypeError</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Input neither in cs nor in sc format</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="todo" open>
+  <summary>Todo</summary>
+  <ul>
+<li>Rather use TypeError instead of base Exception</li>
+</ul>
+</details>
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">sc_shcoeff</span> <span class="o">=</span> <span class="n">cs2sc</span><span class="p">(</span><span class="n">cs_shcoeff</span><span class="p">)</span>
+<span class="go">TO DO: write the output</span>
+</code></pre></div>
+
+          <details class="quote">
+            <summary>Source code in <code>pyshbundle/cs2sc.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">cs2sc</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;converts the square (L+1)x(L+1) matrix &#39;field&#39;, containing</span>
+<span class="sd">    spherical harmonics coefficients in |C\S| storage format into a </span>
+<span class="sd">    rectangular (L+1)x(2L+1) matrix in  /S|C\ format.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        field (np.ndarray): the square (L+1)x(L+1) numpy matrix field , containing</span>
+<span class="sd">                   spherical harmonics coefficients in |C\S| storage format</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        numpy.ndarray: Rectangular (L+1)x(2L+1) numpy matrix in  /S|C\ format</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        TypeError: Input neither in cs nor in sc format</span>
+
+<span class="sd">    Todo:</span>
+<span class="sd">        + Rather use TypeError instead of base Exception</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; sc_shcoeff = cs2sc(cs_shcoeff)</span>
+<span class="sd">        TO DO: write the output</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+    <span class="n">cols</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">field</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">rows</span> <span class="o">!=</span> <span class="n">cols</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">cols</span> <span class="o">!=</span> <span class="mi">2</span><span class="o">*</span><span class="n">rows</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Input neither in cs nor in sc format&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">cols</span> <span class="o">==</span> <span class="mi">2</span><span class="o">*</span><span class="n">rows</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">sc</span> <span class="o">=</span> <span class="n">field</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">c</span>    <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">tril</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+        <span class="n">ut</span>   <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">-</span><span class="n">i</span>
+        <span class="n">s</span>    <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">fliplr</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">ut</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="p">)))</span>
+        <span class="n">sc</span>   <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">s</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:</span><span class="n">rows</span><span class="p">],</span> <span class="n">c</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">return</span><span class="p">(</span><span class="n">sc</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="pyshbundle.sc2cs"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="pyshbundle.sc2cs.sc2cs" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">sc2cs</span><span class="p">(</span><span class="n">field</span><span class="p">)</span></code>
+
+<a href="#pyshbundle.sc2cs.sc2cs" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>converts the rectangular <span class="arithmatex">\((L+1)         imes (2L+1)\)</span> matrix FIELD, containing
+spherical harmonics coefficients in /S|C\ storage format into a 
+square (L+1)x(L+1) matrix in |C\S| format.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>field</code></td>
+          <td>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>the rectangular (L+1)x(2L+1) matrix FIELD, containing
+spherical harmonics coefficients in /S|C\ storage format</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>cs</code></td>          <td>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>square (L+1)x(L+1) matrix in |C\S| format</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="references" open>
+  <summary>References</summary>
+  <p>See the SHBundle docs or PySHBundle docs for more info about SH coeff. storage and retrival formats being implementd.</p>
+</details>
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">cs_fmt</span> <span class="o">=</span> <span class="n">sc2cs</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+<span class="go">TO DO: show suitable output</span>
+</code></pre></div>
+
+          <details class="quote">
+            <summary>Source code in <code>pyshbundle/sc2cs.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">sc2cs</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;converts the rectangular $(L+1) \times (2L+1)$ matrix FIELD, containing</span>
+<span class="sd">    spherical harmonics coefficients in /S|C\ storage format into a </span>
+<span class="sd">    square (L+1)x(L+1) matrix in |C\S| format.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        field (numpy.ndarray()):</span>
+<span class="sd">            the rectangular (L+1)x(2L+1) matrix FIELD, containing</span>
+<span class="sd">            spherical harmonics coefficients in /S|C\ storage format</span>
+
+<span class="sd">    Returns: </span>
+<span class="sd">        cs (numpy.ndarray): </span>
+<span class="sd">            square (L+1)x(L+1) matrix in |C\S| format</span>
+
+<span class="sd">    References:</span>
+<span class="sd">        See the SHBundle docs or PySHBundle docs for more info about SH coeff. storage and retrival formats being implementd.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; cs_fmt = sc2cs(field)</span>
+<span class="sd">        TO DO: show suitable output</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">rows</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+    <span class="n">cols</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">field</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">rows</span><span class="o">!=</span><span class="n">cols</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">cols</span><span class="o">!=</span><span class="mi">2</span><span class="o">*</span><span class="n">rows</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">sc2cs</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="s2">&quot;Input neither in cs nor in sc format&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">cols</span> <span class="o">==</span> <span class="n">rows</span><span class="p">:</span>
+        <span class="n">cs</span> <span class="o">=</span> <span class="n">field</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">c</span>    <span class="o">=</span> <span class="n">field</span><span class="p">[:,</span> <span class="n">rows</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="n">cols</span><span class="p">]</span>
+        <span class="n">st</span>   <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">fliplr</span><span class="p">(</span><span class="n">field</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="n">rows</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+        <span class="n">z</span>    <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="n">rows</span><span class="p">])</span>
+        <span class="n">s</span>    <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">st</span><span class="p">,</span> <span class="n">z</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">cs</span>   <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+
+    <span class="k">return</span><span class="p">(</span><span class="n">cs</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="pyshbundle.clm2cs"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="pyshbundle.clm2cs.clm2cs" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">clm2cs</span><span class="p">(</span><span class="n">data_mat</span><span class="p">,</span> <span class="n">lmax</span><span class="p">,</span> <span class="n">sigma_flag</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#pyshbundle.clm2cs.clm2cs" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Converts the format from CLM to |C\S|
+Under the hood uses the <code>clm2sc</code> and <code>sc2cs</code> function</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>data_mat</code></td>
+          <td>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>list containing [degree;  order; clm; slm; delta clm; delta slm; start data; end date]</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>lmax</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Max Degree of the spherical harmonic expansion</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>sigma_flag</code></td>
+          <td>
+                <code>boolean</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Flag to return the standard deviation data in |C\S| format or not. Defaults to False</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>numpy.ndarray: Spherical Harmonic Coefficients in |C\S| format</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>pyshbundle/clm2cs.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">clm2cs</span><span class="p">(</span><span class="n">data_mat</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">lmax</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">sigma_flag</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Converts the format from CLM to |C\S|</span>
+<span class="sd">    Under the hood uses the `clm2sc` and `sc2cs` function</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data_mat (numpy.ndarray): list containing [degree;  order; clm; slm; delta clm; delta slm; start data; end date]</span>
+<span class="sd">        lmax (int): Max Degree of the spherical harmonic expansion</span>
+<span class="sd">        sigma_flag (boolean): Flag to return the standard deviation data in |C\S| format or not. Defaults to False</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        numpy.ndarray: Spherical Harmonic Coefficients in |C\S| format</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">sigma_flag</span><span class="p">:</span>
+        <span class="n">sc_mat</span><span class="p">,</span> <span class="n">dev_sc</span> <span class="o">=</span> <span class="n">clm2sc</span><span class="p">(</span><span class="n">data_mat</span><span class="o">=</span><span class="n">data_mat</span><span class="p">,</span> <span class="n">lmax</span><span class="o">=</span><span class="n">lmax</span><span class="p">,</span> <span class="n">sigma_flag</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">sc2cs</span><span class="p">(</span><span class="n">sc_mat</span><span class="p">),</span> <span class="n">sc2cs</span><span class="o">.</span><span class="n">sc2cs</span><span class="p">(</span><span class="n">dev_sc</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sc_mat</span> <span class="o">=</span> <span class="n">clm2sc</span><span class="p">(</span><span class="n">data_mat</span><span class="o">=</span><span class="n">data_mat</span><span class="p">,</span> <span class="n">lmax</span><span class="o">=</span><span class="n">lmax</span><span class="p">,</span> <span class="n">sigma_flag</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">sc2cs</span><span class="p">(</span><span class="n">sc_mat</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="pyshbundle.clm2sc"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="pyshbundle.clm2sc.clm2sc" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">clm2sc</span><span class="p">(</span><span class="n">data_mat</span><span class="p">,</span> <span class="n">lmax</span><span class="p">,</span> <span class="n">sigma_flag</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#pyshbundle.clm2sc.clm2sc" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Converts the spherical harmonic coefficients from clm format to /S|C\ format</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>data_mat</code></td>
+          <td>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>list containing [degree;  order; clm; slm; delta clm; delta slm; start data; end date]</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>lmax</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Max Degree of the spherical harmonic expansion</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>sigma_flag</code></td>
+          <td>
+                <code>boolean</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Flag to return the standard deviation data in /S|C\ format or not. Defaults to False</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>numpy.ndarray: Spherical Harmonic Coefficients in /S|C\ format</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="references" open>
+  <summary>References</summary>
+  <p>Refer to the SHBundle or PySHBundle docs for the different data storage and retrival formats.</p>
+</details>
+          <details class="quote">
+            <summary>Source code in <code>pyshbundle/clm2sc.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">clm2sc</span><span class="p">(</span><span class="n">data_mat</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">lmax</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">sigma_flag</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Converts the spherical harmonic coefficients from clm format to /S|C\ format</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data_mat (numpy.ndarray): list containing [degree;  order; clm; slm; delta clm; delta slm; start data; end date]</span>
+<span class="sd">        lmax (int): Max Degree of the spherical harmonic expansion</span>
+<span class="sd">        sigma_flag (boolean): Flag to return the standard deviation data in /S|C\ format or not. Defaults to False</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        numpy.ndarray: Spherical Harmonic Coefficients in /S|C\ format</span>
+
+<span class="sd">    References:</span>
+<span class="sd">        Refer to the SHBundle or PySHBundle docs for the different data storage and retrival formats.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>    
+
+    <span class="n">sc_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">lmax</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">lmax</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span>
+    <span class="n">dev_sc_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">lmax</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">lmax</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span>
+
+    <span class="c1"># as per the convention</span>
+    <span class="n">clm</span> <span class="o">=</span> <span class="n">data_mat</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="n">slm</span> <span class="o">=</span> <span class="n">data_mat</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">]</span>
+    <span class="n">clm_std_dev</span> <span class="o">=</span> <span class="n">data_mat</span><span class="p">[:,</span> <span class="mi">4</span><span class="p">]</span>
+    <span class="n">slm_std_dev</span> <span class="o">=</span> <span class="n">data_mat</span><span class="p">[:,</span> <span class="mi">5</span><span class="p">]</span>
+
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">index1</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">lmax</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">index2</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">index1</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+
+            <span class="n">sc_mat</span><span class="p">[</span><span class="n">index1</span><span class="p">,</span> <span class="n">lmax</span><span class="o">-</span><span class="n">index2</span><span class="p">]</span> <span class="o">=</span> <span class="n">slm</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">sc_mat</span><span class="p">[</span><span class="n">index1</span><span class="p">,</span> <span class="n">lmax</span><span class="o">+</span><span class="n">index2</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">clm</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+            <span class="n">dev_sc_mat</span><span class="p">[</span><span class="n">index1</span><span class="p">,</span> <span class="n">lmax</span><span class="o">-</span><span class="n">index2</span><span class="p">]</span> <span class="o">=</span> <span class="n">slm_std_dev</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">dev_sc_mat</span><span class="p">[</span><span class="n">index1</span><span class="p">,</span> <span class="n">lmax</span><span class="o">+</span><span class="n">index2</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">clm_std_dev</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+            <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="n">sc_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">sc_mat</span><span class="p">,</span> <span class="n">lmax</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">dev_sc_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">dev_sc_mat</span><span class="p">,</span> <span class="n">lmax</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">sigma_flag</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">sc_mat</span><span class="p">,</span> <span class="n">dev_sc_mat</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">sc_mat</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="pyshbundle.klm2sc"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="pyshbundle.klm2sc.klm2sc" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">klm2sc</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></code>
+
+<a href="#pyshbundle.klm2sc.klm2sc" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Converts the spherical harmonic coefficients from klm format to /S|C\ format</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>data</code></td>
+          <td>
+                <code>list</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>list containing [degree;  order; clm; slm; delta clm; delta slm; start data; end date]</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>np.ndarray: Spherical Harmonic Coefficients in /S|C\ format [[files or months]; [2-D matrix of /S|C\ format]]</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>np.ndarray: Standard Deviations of correcponding Spherical Harmonic Coefficients in /S|C\ format [[files or months]; [2-D matrix of /S|C\ format]]</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>pyshbundle/klm2sc.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">klm2sc</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Converts the spherical harmonic coefficients from klm format to /S|C\ format</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (list): list containing [degree;  order; clm; slm; delta clm; delta slm; start data; end date]</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: Spherical Harmonic Coefficients in /S|C\ format [[files or months]; [2-D matrix of /S|C\ format]]</span>
+<span class="sd">        np.ndarray: Standard Deviations of correcponding Spherical Harmonic Coefficients in /S|C\ format [[files or months]; [2-D matrix of /S|C\ format]]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># import pickle</span>
+    <span class="c1"># with open(&quot;/path/saved_as_num&quot;, &quot;rb&quot;) as pk:</span>
+    <span class="c1">#     data=pickle.load(pk)</span>
+
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; Read variables &#39;&#39;&#39;</span>
+    <span class="n">no_of_years</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">degree</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">clm</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">slm</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">clm_std_dev</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">slm_std_dev</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+
+    <span class="n">lmax</span><span class="o">=</span><span class="n">degree</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">degree_order</span><span class="o">=</span><span class="nb">int</span><span class="p">((</span><span class="n">lmax</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">lmax</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; Count no of months of data &#39;&#39;&#39;</span>
+    <span class="n">month_count</span> <span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">month_count</span><span class="o">=</span> <span class="n">month_count</span><span class="o">+</span><span class="nb">round</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">])</span><span class="o">/</span><span class="n">degree_order</span><span class="p">)</span>
+
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; klm &gt;&gt;&gt; sc &#39;&#39;&#39;</span>
+    <span class="n">month</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">sc_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">month_count</span><span class="p">,</span><span class="n">lmax</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">lmax</span><span class="o">+</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">dev_sc_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">month_count</span><span class="p">,</span> <span class="n">lmax</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">lmax</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">no_of_years</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">index2</span> <span class="o">=</span><span class="mi">0</span>
+        <span class="k">for</span> <span class="n">tile</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">clm</span><span class="p">[</span><span class="n">year</span><span class="p">])</span><span class="o">/</span><span class="n">degree_order</span><span class="p">),</span><span class="mi">1</span><span class="p">):</span>  
+            <span class="k">for</span> <span class="n">index1</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">lmax</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span>
+                <span class="n">sc_mat</span><span class="p">[</span><span class="n">month</span><span class="p">,</span><span class="n">index1</span><span class="p">:,</span><span class="n">lmax</span><span class="o">-</span><span class="n">index1</span><span class="p">]</span> <span class="o">=</span> <span class="n">slm</span><span class="p">[</span><span class="n">year</span><span class="p">][(</span><span class="n">index2</span><span class="p">):(</span><span class="n">index2</span><span class="o">+</span><span class="n">lmax</span><span class="o">-</span><span class="n">index1</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+                <span class="n">sc_mat</span><span class="p">[</span><span class="n">month</span><span class="p">,</span><span class="n">index1</span><span class="p">:,</span><span class="n">index1</span><span class="o">+</span><span class="n">lmax</span><span class="p">]</span> <span class="o">=</span> <span class="n">clm</span><span class="p">[</span><span class="n">year</span><span class="p">][(</span><span class="n">index2</span><span class="p">):(</span><span class="n">index2</span><span class="o">+</span><span class="n">lmax</span><span class="o">-</span><span class="n">index1</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+
+                <span class="n">dev_sc_mat</span><span class="p">[</span><span class="n">month</span><span class="p">,</span><span class="n">index1</span><span class="p">:,</span><span class="n">lmax</span><span class="o">-</span><span class="n">index1</span><span class="p">]</span> <span class="o">=</span> <span class="n">slm_std_dev</span><span class="p">[</span><span class="n">year</span><span class="p">][(</span><span class="n">index2</span><span class="p">):(</span><span class="n">index2</span><span class="o">+</span><span class="n">lmax</span><span class="o">-</span><span class="n">index1</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+                <span class="n">dev_sc_mat</span><span class="p">[</span><span class="n">month</span><span class="p">,</span><span class="n">index1</span><span class="p">:,</span><span class="n">index1</span><span class="o">+</span><span class="n">lmax</span><span class="p">]</span> <span class="o">=</span> <span class="n">clm_std_dev</span><span class="p">[</span><span class="n">year</span><span class="p">][(</span><span class="n">index2</span><span class="p">):(</span><span class="n">index2</span><span class="o">+</span><span class="n">lmax</span><span class="o">-</span><span class="n">index1</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+
+
+
+                <span class="c1">#print(month,&#39;\t&#39;,index1,&#39;\t&#39;,Lmax-index1,&#39;\t&#39;,year,&#39;\t&#39;,index2,&#39;\t&#39;,index2+Lmax-index1+1)</span>
+                <span class="n">index2</span> <span class="o">=</span> <span class="n">index2</span><span class="o">+</span><span class="n">lmax</span><span class="o">-</span><span class="n">index1</span><span class="o">+</span><span class="mi">1</span>
+            <span class="n">month</span><span class="o">=</span><span class="n">month</span><span class="o">+</span><span class="mi">1</span>
+
+    <span class="n">sc_mat</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">sc_mat</span><span class="p">,</span><span class="n">lmax</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">dev_sc_mat</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">dev_sc_mat</span><span class="p">,</span><span class="n">lmax</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Conversion into clm format complete&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sc_mat</span><span class="p">,</span> <span class="n">dev_sc_mat</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="pyshbundle.klm2sc.klm2sc_new" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">klm2sc_new</span><span class="p">(</span><span class="n">data_mat</span><span class="p">,</span> <span class="n">lmax</span><span class="p">,</span> <span class="n">sigma_flag</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#pyshbundle.klm2sc.klm2sc_new" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Converts the spherical harmonic coefficients from klm format to /S|C\ format</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>data_mat</code></td>
+          <td>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A 2-D matrix(numpy ndarray)</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>lmax</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>maximum degree of spherical harmonic expansion</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>sigma_flag</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Flag to return the associated standard deviation values. Defaults to False.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>np.ndarray: Spherical Harmonic Coefficients or/and associated standard deviations in /S|C\ format</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>pyshbundle/klm2sc.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">klm2sc_new</span><span class="p">(</span><span class="n">data_mat</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">lmax</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">sigma_flag</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Converts the spherical harmonic coefficients from klm format to /S|C\ format</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data_mat (np.ndarray): A 2-D matrix(numpy ndarray)</span>
+<span class="sd">        lmax (int): maximum degree of spherical harmonic expansion</span>
+<span class="sd">        sigma_flag (bool, optional): Flag to return the associated standard deviation values. Defaults to False.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: Spherical Harmonic Coefficients or/and associated standard deviations in /S|C\ format</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">sc_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">lmax</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">lmax</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span>
+    <span class="n">dev_sc_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">lmax</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">lmax</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span>
+    <span class="n">clm</span> <span class="o">=</span> <span class="n">data_mat</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="n">slm</span> <span class="o">=</span> <span class="n">data_mat</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">]</span>
+    <span class="n">clm_std_dev</span> <span class="o">=</span> <span class="n">data_mat</span><span class="p">[:,</span> <span class="mi">4</span><span class="p">]</span>
+    <span class="n">slm_std_dev</span> <span class="o">=</span> <span class="n">data_mat</span><span class="p">[:,</span> <span class="mi">5</span><span class="p">]</span>
+
+    <span class="c1"># first place the slm and then clm</span>
+    <span class="n">index2</span> <span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">index1</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">lmax</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">sc_mat</span><span class="p">[</span><span class="n">index1</span><span class="p">:,</span> <span class="n">lmax</span><span class="o">-</span><span class="n">index1</span><span class="p">]</span> <span class="o">=</span> <span class="n">slm</span><span class="p">[(</span><span class="n">index2</span><span class="p">):(</span><span class="n">index2</span> <span class="o">+</span> <span class="n">lmax</span><span class="o">-</span><span class="n">index1</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+        <span class="n">sc_mat</span><span class="p">[</span><span class="n">index1</span><span class="p">:,</span> <span class="n">index1</span><span class="o">+</span><span class="n">lmax</span><span class="p">]</span> <span class="o">=</span> <span class="n">clm</span><span class="p">[(</span><span class="n">index2</span><span class="p">):(</span><span class="n">index2</span> <span class="o">+</span> <span class="n">lmax</span><span class="o">-</span><span class="n">index1</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+
+        <span class="n">dev_sc_mat</span><span class="p">[</span><span class="n">index1</span><span class="p">:,</span> <span class="n">lmax</span><span class="o">-</span><span class="n">index1</span><span class="p">]</span> <span class="o">=</span> <span class="n">slm_std_dev</span><span class="p">[(</span><span class="n">index2</span><span class="p">):(</span><span class="n">index2</span> <span class="o">+</span> <span class="n">lmax</span><span class="o">-</span><span class="n">index1</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+        <span class="n">dev_sc_mat</span><span class="p">[</span><span class="n">index1</span><span class="p">:,</span> <span class="n">index1</span><span class="o">+</span><span class="n">lmax</span><span class="p">]</span> <span class="o">=</span> <span class="n">clm_std_dev</span><span class="p">[(</span><span class="n">index2</span><span class="p">):(</span><span class="n">index2</span> <span class="o">+</span> <span class="n">lmax</span><span class="o">-</span><span class="n">index1</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+
+        <span class="n">index2</span> <span class="o">=</span> <span class="n">index2</span> <span class="o">+</span> <span class="n">lmax</span><span class="o">-</span><span class="n">index1</span><span class="o">+</span><span class="mi">1</span>
+
+    <span class="n">sc_mat</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">sc_mat</span><span class="p">,</span><span class="n">lmax</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">dev_sc_mat</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">dev_sc_mat</span><span class="p">,</span><span class="n">lmax</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">sigma_flag</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">sc_mat</span><span class="p">,</span> <span class="n">dev_sc_mat</span>
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="k">return</span> <span class="n">sc_mat</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Nico Sneeuw, Matthias Weigelt, Markus Antoni, Matthias Roth, Balaji Devaraju, et. al. (2021). SHBUNDLE 2021. http://www.gis.uni-stuttgart.de/research/projects/Bundles.</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    2024-03-27
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
